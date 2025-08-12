@@ -1,0 +1,90 @@
+{
+  "brands": [
+    {
+      "id": "b_marca_a",
+      "nome": "Marca A",
+      "ativa": true
+    },
+    {
+      "id": "b_marca_b",
+      "nome": "Marca B",
+      "ativa": true
+    }
+  ],
+  "reps": [
+    {
+      "id": "r_ana",
+      "nome": "Ana Silva",
+      "whatsapp": "5561999999999",
+      "email": "ana@example.com",
+      "marcas": [
+        "b_marca_a",
+        "b_marca_b"
+      ],
+      "brandConfigs": {
+        "b_marca_a": {
+          "tipo": "DIARIO",
+          "hora": "09:00",
+          "diasUteis": true,
+          "pularFeriados": false,
+          "diasSemana": [
+            1
+          ],
+          "diaMes": 1
+        },
+        "b_marca_b": {
+          "tipo": "SEMANAL",
+          "hora": "10:00",
+          "diasUteis": true,
+          "pularFeriados": true,
+          "diasSemana": [
+            1,
+            3,
+            5
+          ],
+          "diaMes": 1
+        }
+      }
+    },
+    {
+      "id": "r_beto",
+      "nome": "Beto Souza",
+      "whatsapp": "5562888888888",
+      "email": "beto@example.com",
+      "marcas": [
+        "b_marca_b"
+      ],
+      "brandConfigs": {
+        "b_marca_b": {
+          "tipo": "MENSAL",
+          "hora": "11:00",
+          "diaMes": 5,
+          "diasUteis": true,
+          "pularFeriados": true
+        }
+      }
+    }
+  ],
+  "solic": [
+    {
+      "id": "s_estoque",
+      "marcaId": "b_marca_a",
+      "titulo": "Estoque diário",
+      "mensagem": "Bom dia, {NOME_REP}! Pode enviar o saldo de estoque da {MARCA} de {DATA_BASE}?",
+      "reps": [
+        "r_ana"
+      ],
+      "agenda": {
+        "tipo": "DIARIO",
+        "hora": "09:00",
+        "diasUteis": true,
+        "pularFeriados": false,
+        "diasSemana": [
+          1
+        ],
+        "diaMes": 1
+      },
+      "ativo": true
+    }
+  ]
+}
